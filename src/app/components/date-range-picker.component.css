@@ -1,0 +1,222 @@
+.date-range-picker {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.date-input-group {
+  flex: 1;
+}
+
+.date-input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.date-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.quick-select {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.preset-button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.preset-button:hover {
+  background: #f8f9fa;
+  border-color: #3498db;
+}
+
+.preset-button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.calendar-container {
+  margin-bottom: 20px;
+}
+
+.calendar {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.nav-button:hover {
+  background: #e9ecef;
+}
+
+.month-year {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day-header {
+  padding: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  background: #f8f9fa;
+  color: #6c757d;
+  border-bottom: 1px solid #ddd;
+}
+
+.day-button {
+  padding: 8px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.day-button:hover:not(:disabled) {
+  background: #f8f9fa;
+}
+
+.day-button.other-month {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.day-button.selected {
+  background: #3498db;
+  color: white;
+}
+
+.day-button.in-range {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.day-button.range-start {
+  background: #3498db;
+  color: white;
+  border-radius: 4px 0 0 4px;
+}
+
+.day-button.range-end {
+  background: #3498db;
+  color: white;
+  border-radius: 0 4px 4px 0;
+}
+
+.day-button.range-start.range-end {
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.clear-button,
+.toggle-button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  background: #f8f9fa;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.toggle-button:hover {
+  background: #f8f9fa;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px) {
+  .date-range-picker {
+    max-width: none;
+    padding: 15px;
+  }
+  
+  .date-inputs {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .quick-select {
+    justify-content: center;
+  }
+  
+  .preset-button {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+}

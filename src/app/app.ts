@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
+import { StateService } from './services/state.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,5 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('angular-social-app');
+  protected readonly stateService = inject(StateService);
 }
