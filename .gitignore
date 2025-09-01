@@ -40,3 +40,19 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Capacitor
+android/app/build/
+android/app/.cxx/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/.gradle/
+android/build/
+android/local.properties
+android/.idea/
+android/capacitor-cordova-android-plugins/src/main/assets/
+ios/App/build/
+ios/App/public/
+ios/App/Pods/
+ios/App/Podfile.lock
