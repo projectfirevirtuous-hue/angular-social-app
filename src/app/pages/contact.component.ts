@@ -189,7 +189,7 @@ import { ChangeDetectionService } from '../services/change-detection.service';
       </div>
     </app-container>
   `,
-  styleUrl: './contact.component.css'
+  styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   protected readonly stateService = inject(StateService);

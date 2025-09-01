@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
       <ng-content></ng-content>
     </div>
   `,
-  styleUrl: './container.component.css'
+  styleUrl: './container.component.scss'
 })
 export class ContainerComponent {
   @Input() containerClass: string = '';

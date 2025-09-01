@@ -105,7 +105,7 @@ import { StateService } from '../services/state.service';
       </div>
     </app-container>
   `,
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.scss'
 })
 export class AboutComponent {
   protected readonly stateService = inject(StateService);

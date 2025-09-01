@@ -80,7 +80,7 @@ export interface DateRange {
       </div>
     </div>
   `,
-  styleUrl: './date-range-picker.component.css'
+  styleUrl: './date-range-picker.component.scss'
 })
 export class DateRangePickerComponent {
   @Input() initialRange: DateRange = { startDate: null, endDate: null };

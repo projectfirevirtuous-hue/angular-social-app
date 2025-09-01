@@ -142,7 +142,7 @@ import { ChangeDetectionService } from '../services/change-detection.service';
       </div>
     </app-container>
   `,
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   private readonly router = inject(Router);
