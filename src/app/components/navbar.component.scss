@@ -6,12 +6,15 @@ $navbar-height: 60px;
 
 .navbar {
   background-color: $navbar-bg;
-  padding: 0;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: calc(#{$navbar-height} + env(safe-area-inset-top, 24px));
+  padding: 0;
 }
 
 .nav-container {
@@ -22,6 +25,8 @@ $navbar-height: 60px;
   justify-content: space-between;
   align-items: center;
   height: $navbar-height;
+  margin-top: env(safe-area-inset-top, 24px);
+  box-sizing: border-box;
 }
 
 .nav-logo {

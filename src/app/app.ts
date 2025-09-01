@@ -26,8 +26,9 @@ export class App implements OnInit {
     if (this.platform.ANDROID || this.platform.IOS) {
       try {
         // Configure status bar
-        await StatusBar.setStyle({ style: Style.Default });
-        await StatusBar.setBackgroundColor({ color: '#3498db' });
+        await StatusBar.setOverlaysWebView({ overlay: true });
+        await StatusBar.setStyle({ style: Style.Dark });
+        await StatusBar.setBackgroundColor({ color: '#2c3e50' });
 
         // Hide splash screen after app loads
         await SplashScreen.hide();
