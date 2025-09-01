@@ -183,8 +183,35 @@ This project is private and proprietary. All rights reserved.
 - [ ] Real-time messaging system
 - [ ] Advanced user profiles
 - [ ] Content sharing capabilities
-- [ ] Mobile app development
+- [x] Mobile app development (Android APK)
 - [ ] Third-party integrations
+
+## 📱 Android App
+
+This Angular Social App can be built as an Android APK using Ionic Capacitor.
+
+### Quick Start (Android)
+```bash
+# Build Android APK
+npm run android:build
+
+# Or step by step:
+npm run build
+npm run android:sync
+cd android && ./gradlew assembleDebug
+```
+
+### Prerequisites for Android Build
+- Node.js 18+ and npm
+- Java JDK 17+
+- Android SDK and Build Tools
+- Android Studio (recommended)
+
+📖 **Detailed instructions:** See [ANDROID_BUILD.md](./ANDROID_BUILD.md)
+
+### APK Output Locations
+- Debug: `android/app/build/outputs/apk/debug/app-debug.apk`
+- Release: `android/app/build/outputs/apk/release/app-release.apk`
 
 ---
 
