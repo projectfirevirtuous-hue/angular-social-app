@@ -34,7 +34,7 @@ import { ChangeDetectionService } from '../services/change-detection.service';
       </div>
     </nav>
   `,
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
   private readonly router = inject(Router);

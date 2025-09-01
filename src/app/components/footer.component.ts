@@ -36,6 +36,6 @@ import { Component } from '@angular/core';
       </div>
     </footer>
   `,
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.scss'
 })
 export class FooterComponent {}

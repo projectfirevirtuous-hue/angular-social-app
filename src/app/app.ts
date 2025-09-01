@@ -5,7 +5,7 @@ import { StateService } from './services/state.service';
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: false,
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('angular-social-app');

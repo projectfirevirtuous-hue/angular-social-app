@@ -121,7 +121,7 @@ export interface DateRange {
       </div>
     </app-container>
   `,
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   protected readonly stateService = inject(StateService);
