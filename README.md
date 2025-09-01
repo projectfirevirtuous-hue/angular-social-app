@@ -18,6 +18,7 @@ A modern social media platform built with **Angular 20** featuring cutting-edge 
 - **Framework**: Angular 20.2.0 with zoneless architecture
 - **Language**: TypeScript 5.9.2  
 - **State Management**: Angular Signals
+- **Mobile**: Ionic Capacitor 7.4.3 for native Android builds
 - **Styling**: CSS3 with modern design patterns
 - **Testing**: Karma + Jasmine
 - **Build Tool**: Angular CLI with esbuild
@@ -114,6 +115,15 @@ npx prettier --write .                  # Format all files
 npx prettier --check .                  # Check formatting
 ```
 
+### Android Development
+```bash
+npm run android:build    # Complete Android APK build process
+npm run android:sync     # Build Angular app and sync with Capacitor
+npm run android:run      # Run on connected Android device/emulator
+npm run android:open     # Open Android project in Android Studio
+./test-android-setup.sh  # Validate Android development setup
+```
+
 ## 🌟 Key Components
 
 ### Home Page
@@ -188,17 +198,20 @@ This project is private and proprietary. All rights reserved.
 
 ## 📱 Android App
 
-This Angular Social App can be built as an Android APK using Ionic Capacitor.
+This Angular Social App can be built as an Android APK using Ionic Capacitor with full CI/CD automation.
 
 ### Quick Start (Android)
 ```bash
-# Build Android APK
+# Automated build (recommended)
 npm run android:build
 
-# Or step by step:
-npm run build
-npm run android:sync
-cd android && ./gradlew assembleDebug
+# Manual step-by-step process
+npm run build                    # Build Angular app
+npm run android:sync            # Sync with Capacitor
+cd android && ./gradlew assembleDebug  # Build debug APK
+
+# Validate setup
+./test-android-setup.sh         # Test Android development environment
 ```
 
 ### Prerequisites for Android Build
@@ -210,8 +223,15 @@ cd android && ./gradlew assembleDebug
 📖 **Detailed instructions:** See [ANDROID_BUILD.md](./ANDROID_BUILD.md)
 
 ### APK Output Locations
-- Debug: `android/app/build/outputs/apk/debug/app-debug.apk`
-- Release: `android/app/build/outputs/apk/release/app-release.apk`
+- **Debug APK:** `android/app/build/outputs/apk/debug/app-debug.apk`
+- **Release APK:** `android/app/build/outputs/apk/release/app-release-unsigned.apk`
+
+### Automated CI/CD
+The repository includes GitHub Actions workflow (`.github/workflows/build-android.yml`) that automatically:
+- Builds APKs on every push to main branch
+- Runs on pull requests for validation
+- Uploads debug and release APK artifacts
+- Supports manual workflow dispatch
 
 ---
 
